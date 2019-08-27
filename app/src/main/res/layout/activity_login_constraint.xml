@@ -1,71 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/loginActivityRoot"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_constraintHorizontal_chainStyle="spread_inside">
 
     <TextView
         android:id="@+id/loginActivityHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/loginActivityHeadline"
         android:textColor="@android:color/holo_orange_dark"
-        android:textSize="32dp" />
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="spread" />
 
 
     <TextView
         android:id="@+id/loginActivityUsername"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/loginActivityUsername" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="9dp"
+        android:text="@string/loginActivityUsername"
+        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintEnd_toStartOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintHorizontal_weight="50"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityHeadline"
+        app:layout_constraintWidth_default="spread" />
 
     <EditText
         android:id="@+id/loginActivityUsernamePlaceholder"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/loginActivityUsernamePlaceholder" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/loginActivityUsernamePlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityHeadline"
+        app:layout_constraintHorizontal_weight="50"
+        app:layout_constraintStart_toEndOf="@+id/loginActivityUsername"
+        app:layout_constraintTop_toBottomOf="@+id/loginActivityHeadline"
+        app:layout_constraintWidth_default="spread" />
 
 
     <TextView
         android:id="@+id/loginActivityPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/loginActivityPassword" />
+        android:text="@string/loginActivityPassword"
+        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityPasswordPlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsername"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityUsername"
+        app:layout_constraintWidth_default="spread" />
 
     <EditText
         android:id="@+id/loginActivityPasswordPlaceholder"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/loginActivityPasswordPlaceholder" />
+        android:layout_marginTop="8dp"
+        android:hint="@string/loginActivityPasswordPlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintWidth_default="spread" />
 
 
     <TextView
         android:id="@+id/loginActivityEmailProvider"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/loginActivityEmailProvider" />
+        android:text="@string/loginActivityEmailProvider"
+        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsername"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityPassword"
+        app:layout_constraintWidth_default="spread" />
 
     <Spinner
         android:id="@+id/loginActivityEmailProviderList"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:entries="@array/loginActivityEmailProviderList" />
+        android:layout_marginTop="8dp"
+        android:entries="@array/loginActivityEmailProviderList"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityPasswordPlaceholder"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityPasswordPlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/loginActivityPasswordPlaceholder"
+        app:layout_constraintWidth_default="spread" />
 
 
     <Button
         android:id="@+id/loginActivityButtonAbort"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
         android:background="@android:color/holo_orange_dark"
-        android:text="@string/generalAbort" />
-
+        android:text="@string/generalAbort"
+        app:layout_constraintEnd_toStartOf="@+id/loginActivityButtonSend"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="50"
+        app:layout_constraintStart_toStartOf="@+id/loginActivityEmailProvider"
+        app:layout_constraintTop_toBottomOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintWidth_default="spread" />
 
     <Button
         android:id="@+id/loginActivityButtonSend"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/holo_orange_dark"
-        android:text="@string/generalSend" />
+        android:text="@string/generalSend"
+        app:layout_constraintEnd_toEndOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="50"
+        app:layout_constraintStart_toEndOf="@+id/loginActivityButtonAbort"
+        app:layout_constraintTop_toBottomOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintWidth_default="spread" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
