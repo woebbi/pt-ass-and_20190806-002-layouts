@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emailListActivityRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+    <!--/placeholder-->
+    <LinearLayout
+        android:id="@+id/emailListActivityLL"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+        <!--/placeholder-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="75"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/emailListActivityFrom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="start|bottom"
+                android:text="von"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emailListActivitySubject"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="start|center"
+                android:text="betreff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/emailListActivityText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40"
+                android:gravity="start|top"
+                android:text="nachricht" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/emailListActivityTime"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="25"
+                android:gravity="end|bottom"
+                android:text="00:00:00" />
+
+            <TextView
+                android:id="@+id/emailListActivityDate"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="75"
+                android:gravity="end"
+                android:text="00.00.0000" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

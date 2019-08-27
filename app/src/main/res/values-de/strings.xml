@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="loginActivityPassword">Passwort:</string>
+    <string name="loginActivityUsername">Benutzername:</string>
+    <string name="loginActivityEmailProvider">Emailanbieter:</string>
+    <string name="generalAbort">Abbrechen</string>
+    <string name="generalSend">Abschicken</string>
+    <string name="loginActivityEmail">Emailaddresse</string>
+    <string name="loginActivityPasswordPlaceholder">Passwort</string>
+    <string name="loginActivityUsernamePlaceholder">Email Adresse</string>
+    <string name="composeActivityFrom">Von:</string>
+    <string name="composeActivitySubject">Betreff:</string>
+    <string name="composeActivityTextContent">Hier schreiben</string>
+    <string name="composeActivityTo">An:</string>
+</resources>

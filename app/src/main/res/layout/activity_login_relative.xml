@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="26dp">
+
+    <TextView
+        android:id="@+id/textViewHeadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/loginActivityHeadline"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/textBenutzer"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="190dp"
+        android:gravity="center|left"
+        android:layout_toLeftOf="@id/editBenutzer"
+        android:text="Benuzername" />
+
+    <EditText
+        android:id="@+id/editBenutzer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="190dp"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:minWidth="180dp" />
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBenutzer"
+        android:layout_alignParentStart="true"
+        android:gravity="center|left"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/editPasswort"
+        android:text="Kennwort" />
+
+    <EditText
+        android:id="@+id/editPasswort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editBenutzer"
+        android:layout_alignParentRight="true"
+        android:hint="Benutzerkennwort"
+        android:minWidth="180dp" />
+
+
+    <TextView
+        android:id="@+id/textProvider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPasswort"
+        android:gravity="center|left"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/spinner"
+        android:text="EmailPriovider" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPasswort"
+        android:layout_alignParentRight="true"
+        android:entries="@array/loginActivityEmailProviderList"
+        android:minWidth="180dp" />
+
+
+    <Button
+        android:id="@+id/buttonlinks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Abbrechen" />
+
+    <Button
+        android:id="@+id/buttonrechts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="Senden" />
+</RelativeLayout>

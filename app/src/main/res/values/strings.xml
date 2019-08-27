@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name" translatable="false">20190806-002-layouts</string>
+    <string name="loginActivityHeadline" translatable="false">woebbiEmailClient Login</string>
+    <string name="loginActivityUsername">Username:</string>
+    <string name="loginActivityPassword">Password:</string>
+    <string name="loginActivityEmailProvider">Email provider:</string>
+    <string name="generalAbort">Cancel</string>
+    <string name="generalSend">Send</string>
+    <string name="loginActivityEmail">Emailadress</string>
+    <string-array name="loginActivityEmailProviderList" >
+        <item>Googlemail</item>
+        <item>Gmx.net</item>
+        <item>Web.de</item>
+    </string-array>
+    <string name="loginActivityPasswordPlaceholder">Password</string>
+    <string name="loginActivityUsernamePlaceholder">Email address</string>
+    <string name="composeActivityFrom">From:</string>
+    <string name="composeActivityTo">To:</string>
+    <string name="composeActivitySubject">Subject:</string>
+    <string name="composeActivityTextContent">Please write here</string>
+    <string name="viewActivitySubject" translatable="false">Subject</string>
+    <string name="viewActivityFrom" translatable="false">From:</string>
+    <string name="viewActivityTextContent" translatable="false">TextContent</string>
+    <string name="drawerActivityText" translatable="false">Text</string>
+</resources>
