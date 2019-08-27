@@ -57,7 +57,6 @@
         android:hint="Benutzerkennwort"
         android:minWidth="180dp" />
 
-
     <TextView
         android:id="@+id/textProvider"
         android:layout_width="wrap_content"
