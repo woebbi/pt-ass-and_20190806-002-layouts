@@ -4,20 +4,20 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/relativeTestbtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:text="Button1" />
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/relativeTestbtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:text="Button2" />
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/relativeTestbtn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -25,31 +25,31 @@
         android:text="Button3" />
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/relativeTestbtn4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="Button4" />
     <Button
-        android:id="@+id/btn5"
+        android:id="@+id/relativeTestbtn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btn2"
+        android:layout_alignBottom="@+id/relativeTestbtn2"
         android:layout_centerHorizontal="true"
         android:text="Button5" />
     <Button
-        android:id="@+id/btn6"
+        android:id="@+id/relativeTestbtn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn4"
+        android:layout_above="@+id/relativeTestbtn4"
         android:layout_centerHorizontal="true"
         android:text="Button6" />
     <Button
-        android:id="@+id/btn7"
+        android:id="@+id/relativeTestbtn7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/btn1"
-        android:layout_toRightOf="@+id/btn1"
+        android:layout_toEndOf="@+id/relativeTestbtn1"
+        android:layout_toRightOf="@+id/relativeTestbtn1"
         android:layout_alignParentRight="true"
         android:text="Button7" />
 </RelativeLayout>

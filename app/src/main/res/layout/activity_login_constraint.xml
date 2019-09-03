@@ -2,13 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginActivityRoot"
+    android:id="@+id/constraintLoginActivityRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_constraintHorizontal_chainStyle="spread_inside">
 
     <TextView
-        android:id="@+id/loginActivityHeadline"
+        android:id="@+id/constraintLoginActivityHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -24,105 +24,105 @@
 
 
     <TextView
-        android:id="@+id/loginActivityUsername"
+        android:id="@+id/constraintLoginActivityUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="9dp"
         android:text="@string/loginActivityUsername"
-        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityUsernamePlaceholder"
-        app:layout_constraintEnd_toStartOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintBaseline_toBaselineOf="@+id/constraintLoginActivityUsernamePlaceholder"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLoginActivityUsernamePlaceholder"
         app:layout_constraintHorizontal_weight="50"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityHeadline"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityHeadline"
         app:layout_constraintWidth_default="spread" />
 
     <EditText
-        android:id="@+id/loginActivityUsernamePlaceholder"
+        android:id="@+id/constraintLoginActivityUsernamePlaceholder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="8dp"
         android:hint="@string/loginActivityUsernamePlaceholder"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityHeadline"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityHeadline"
         app:layout_constraintHorizontal_weight="50"
-        app:layout_constraintStart_toEndOf="@+id/loginActivityUsername"
-        app:layout_constraintTop_toBottomOf="@+id/loginActivityHeadline"
+        app:layout_constraintStart_toEndOf="@+id/constraintLoginActivityUsername"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLoginActivityHeadline"
         app:layout_constraintWidth_default="spread" />
 
 
     <TextView
-        android:id="@+id/loginActivityPassword"
+        android:id="@+id/constraintLoginActivityPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/loginActivityPassword"
-        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityPasswordPlaceholder"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsername"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityUsername"
+        app:layout_constraintBaseline_toBaselineOf="@+id/constraintLoginActivityPasswordPlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityUsername"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityUsername"
         app:layout_constraintWidth_default="spread" />
 
     <EditText
-        android:id="@+id/loginActivityPasswordPlaceholder"
+        android:id="@+id/constraintLoginActivityPasswordPlaceholder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="@string/loginActivityPasswordPlaceholder"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsernamePlaceholder"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityUsernamePlaceholder"
-        app:layout_constraintTop_toBottomOf="@+id/loginActivityUsernamePlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityUsernamePlaceholder"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityUsernamePlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLoginActivityUsernamePlaceholder"
         app:layout_constraintWidth_default="spread" />
 
 
     <TextView
-        android:id="@+id/loginActivityEmailProvider"
+        android:id="@+id/constraintLoginActivityEmailProvider"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/loginActivityEmailProvider"
-        app:layout_constraintBaseline_toBaselineOf="@+id/loginActivityEmailProviderList"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityUsername"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityPassword"
+        app:layout_constraintBaseline_toBaselineOf="@+id/constraintLoginActivityEmailProviderList"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityUsername"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityPassword"
         app:layout_constraintWidth_default="spread" />
 
     <Spinner
-        android:id="@+id/loginActivityEmailProviderList"
+        android:id="@+id/constraintLoginActivityEmailProviderList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:entries="@array/loginActivityEmailProviderList"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityPasswordPlaceholder"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityPasswordPlaceholder"
-        app:layout_constraintTop_toBottomOf="@+id/loginActivityPasswordPlaceholder"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityPasswordPlaceholder"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityPasswordPlaceholder"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLoginActivityPasswordPlaceholder"
         app:layout_constraintWidth_default="spread" />
 
 
     <Button
-        android:id="@+id/loginActivityButtonAbort"
+        android:id="@+id/constraintLoginActivityButtonAbort"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="20dp"
         android:background="@android:color/holo_orange_dark"
         android:text="@string/generalAbort"
-        app:layout_constraintEnd_toStartOf="@+id/loginActivityButtonSend"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLoginActivityButtonSend"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintHorizontal_weight="50"
-        app:layout_constraintStart_toStartOf="@+id/loginActivityEmailProvider"
-        app:layout_constraintTop_toBottomOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintStart_toStartOf="@+id/constraintLoginActivityEmailProvider"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLoginActivityEmailProviderList"
         app:layout_constraintWidth_default="spread" />
 
     <Button
-        android:id="@+id/loginActivityButtonSend"
+        android:id="@+id/constraintLoginActivityButtonSend"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_orange_dark"
         android:text="@string/generalSend"
-        app:layout_constraintEnd_toEndOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLoginActivityEmailProviderList"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintHorizontal_weight="50"
-        app:layout_constraintStart_toEndOf="@+id/loginActivityButtonAbort"
-        app:layout_constraintTop_toBottomOf="@+id/loginActivityEmailProviderList"
+        app:layout_constraintStart_toEndOf="@+id/constraintLoginActivityButtonAbort"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLoginActivityEmailProviderList"
         app:layout_constraintWidth_default="spread" />
 
 

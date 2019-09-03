@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rl1"
+    android:id="@+id/relativeLoginActivityrl1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:padding="26dp">
 
     <TextView
-        android:id="@+id/textViewHeadline"
+        android:id="@+id/relativeLoginActivitytextViewHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,17 +18,17 @@
         android:textSize="32dp" />
 
     <TextView
-        android:id="@+id/textBenutzer"
+        android:id="@+id/relativeLoginActivitytextBenutzer"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="190dp"
         android:gravity="center|left"
-        android:layout_toLeftOf="@id/editBenutzer"
+        android:layout_toLeftOf="@id/relativeLoginActivityeditBenutzer"
         android:text="Benuzername" />
 
     <EditText
-        android:id="@+id/editBenutzer"
+        android:id="@+id/relativeLoginActivityeditBenutzer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -38,60 +38,60 @@
         android:minWidth="180dp" />
 
     <TextView
-        android:id="@+id/textPassword"
+        android:id="@+id/relativeLoginActivitytextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editBenutzer"
+        android:layout_below="@id/relativeLoginActivityeditBenutzer"
         android:layout_alignParentStart="true"
         android:gravity="center|left"
         android:layout_marginTop="10dp"
-        android:layout_toLeftOf="@id/editPasswort"
+        android:layout_toLeftOf="@id/relativeLoginActivityeditPasswort"
         android:text="Kennwort" />
 
     <EditText
-        android:id="@+id/editPasswort"
+        android:id="@+id/relativeLoginActivityeditPasswort"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editBenutzer"
+        android:layout_below="@id/relativeLoginActivityeditBenutzer"
         android:layout_alignParentRight="true"
         android:hint="Benutzerkennwort"
         android:minWidth="180dp" />
 
     <TextView
-        android:id="@+id/textProvider"
+        android:id="@+id/relativeLoginActivitytextProvider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editPasswort"
+        android:layout_below="@id/relativeLoginActivityeditPasswort"
         android:gravity="center|left"
         android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@id/spinner"
+        android:layout_toLeftOf="@id/relativeLoginActivityspinner"
         android:text="EmailPriovider" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/relativeLoginActivityspinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editPasswort"
+        android:layout_below="@id/relativeLoginActivityeditPasswort"
         android:layout_alignParentRight="true"
         android:entries="@array/loginActivityEmailProviderList"
         android:minWidth="180dp" />
 
 
     <Button
-        android:id="@+id/buttonlinks"
+        android:id="@+id/relativeLoginActivitybuttonlinks"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner"
+        android:layout_below="@id/relativeLoginActivityspinner"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="50dp"
         android:background="@android:color/holo_orange_dark"
         android:text="Abbrechen" />
 
     <Button
-        android:id="@+id/buttonrechts"
+        android:id="@+id/relativeLoginActivitybuttonrechts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/spinner"
+        android:layout_below="@id/relativeLoginActivityspinner"
         android:layout_alignParentRight="true"
         android:layout_marginRight="50dp"
         android:background="@android:color/holo_orange_dark"
