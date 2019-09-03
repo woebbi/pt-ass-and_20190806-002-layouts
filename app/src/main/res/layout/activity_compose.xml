@@ -29,7 +29,7 @@
             android:text="@string/composeActivityFrom" />
 
         <EditText
-            android:id="@+id/composeActivityFromEdit"
+            android:id="@+id/composeActivityFromInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="75" />
@@ -52,14 +52,14 @@
             android:text="@string/composeActivityTo" />
 
         <EditText
-            android:id="@+id/composeActivityToEdit"
+            android:id="@+id/composeActivityToInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="75" />
     </LinearLayout>
 
     <EditText
-        android:id="@+id/composeActivitySubject"
+        android:id="@+id/composeActivitySubjectInput"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="5dp"
@@ -68,7 +68,7 @@
 
 
     <EditText
-        android:id="@+id/composeActivityTextContent"
+        android:id="@+id/composeActivityTextContentInput"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="5dp"

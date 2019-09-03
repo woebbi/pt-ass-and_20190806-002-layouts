@@ -40,14 +40,14 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/loginActivityUsername"
+                    android:id="@+id/loginActivityUsernameText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/loginActivityUsername" />
 
                 <EditText
-                    android:id="@+id/loginActivityUsernamePlaceholder"
+                    android:id="@+id/loginActivityUsernameInput"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -63,14 +63,14 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/loginActivityPassword"
+                    android:id="@+id/loginActivityPasswordText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/loginActivityPassword" />
 
                 <EditText
-                    android:id="@+id/loginActivityPasswordPlaceholder"
+                    android:id="@+id/loginActivityPasswordInput"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
@@ -86,7 +86,7 @@
                 android:weightSum="3">
 
                 <TextView
-                    android:id="@+id/loginActivityEmailProvider"
+                    android:id="@+id/loginActivityEmailProviderText"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
