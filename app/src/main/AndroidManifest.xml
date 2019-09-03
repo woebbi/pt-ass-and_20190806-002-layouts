@@ -3,6 +3,7 @@
     package="com.woebbi.a20190806_002_layouts">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
