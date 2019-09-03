@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainActivityRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <!--/*
@@ -11,24 +12,42 @@
     -ListView
     -FAB
 
-*/-->
-
-
-    <ListView
-        android:id="@+id/mainActivityListView"
+    */-->
+    <Toolbar
+        android:id="@+id/mainActivityToolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/mainActivityFAB"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_dark" />
+
+    <FrameLayout
+        android:id="@+id/mainActivityFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mainActivityToolbar">
+
+        <ListView
+            android:id="@+id/mainActivityListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!--
+
+        -->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivityFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_orange_light"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:src="@drawable/ic_mail_black_24dp" />
+        <!--
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="10dp"
-        android:background="@android:color/holo_orange_light"
-        android:backgroundTint="@android:color/holo_orange_dark"
-        android:src="@drawable/ic_mail_black_24dp" />
+        android:layout_alignParentBottom="true"/>
+        -->
+
+    </FrameLayout>
+
+
 </RelativeLayout>
-
-
