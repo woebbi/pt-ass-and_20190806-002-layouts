@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +19,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText lAPasswordInput;
+    private TextView lAPasswordText;
     private EditText lAUsernameInput;
+    private TextView lAUsernameText;
     private Button lAButtonSend;
     private Button lAButtonAbort;
     private Spinner lAEmailProviderList;
@@ -30,7 +34,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //assosiate internal class variable with the loginActivity IDs
         lAUsernameInput = findViewById(R.id.loginActivityUsernameInput);
+        lAUsernameText = findViewById(R.id.loginActivityUsernameText);
         lAPasswordInput = findViewById(R.id.loginActivityPasswordInput);
+        lAPasswordText = findViewById(R.id.loginActivityPasswordText);
         lAButtonAbort = findViewById(R.id.loginActivityButtonAbort);
         lAButtonSend = findViewById(R.id.loginActivityButtonSend);
         lAEmailProviderList = findViewById(R.id.loginActivityEmailProviderList);
@@ -54,7 +60,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-
-
+        //R.id.loginActivityPasswordText
+        if (view.getId() == lAButtonSend.getId()) {
+            Toast.makeText(this, "Anmelden", Toast.LENGTH_LONG).show();
+            lAUsernameText.setTextColor(getColor(R.color.colorPrimaryDark));
+        } else if (view.getId() == lAButtonAbort.getId()) {
+            lAUsernameText.setTextColor(getColor(R.color.colorAccent));
+            Toast.makeText(this, "Abrechen", Toast.LENGTH_LONG).show();
+        }
     }
 }
