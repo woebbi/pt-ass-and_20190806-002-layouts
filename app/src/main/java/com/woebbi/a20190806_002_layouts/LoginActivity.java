@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this, "Anmelden", Toast.LENGTH_LONG).show();
             lAUsernameText.setTextColor(getColor(R.color.colorPrimaryDark));
         } else if (view.getId() == lAButtonAbort.getId()) {
-            lAUsernameText.setTextColor(getColor(R.color.colorAccent));
+            lAUsernameText.setText(R.string.loginActivityPassword);
             Toast.makeText(this, "Abrechen", Toast.LENGTH_LONG).show();
         }
     }
