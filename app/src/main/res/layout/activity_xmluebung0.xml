@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/xmlUebung0ActivityRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/xmlUebung0ActivityToolbarText"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/xmlUebung0ActivityUsernameText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/xmlUebung0ActivityUsernameText" />
+
+                <EditText
+                    android:id="@+id/xmlUebung0ActivityUsernameInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/xmlUebung0ActivityUsernameInput" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/xmlUebung0ActivityPhoneNoText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/xmlUebung0ActivityPhoneNoText" />
+
+                <EditText
+                    android:id="@+id/xmlUebung0ActivityPhoneNoInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/xmlUebung0ActivityPhoneNoInput" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/xmlUebung0ActivityEmailIdText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/xmlUebung0ActivityEmailIdText" />
+
+                <EditText
+                    android:id="@+id/xmlUebung0ActivityEmailIdInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/xmlUebung0ActivityEmailIdInput" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:weightSum="8">
+
+                <Button
+                    android:id="@+id/xmlUebung0ActivityButtonCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/xmlUebung0ActivityButtonCancel" />
+
+                <Button
+                    android:id="@+id/xmlUebung0ActivityButtonSubmit"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="6dp"
+                    android:layout_weight="4"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/xmlUebung0ActivityButtonSubmit" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
