@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            ratio
+
             android:background="@android:color/darker_gray" />
 
         <Button
