@@ -1,5 +1,8 @@
 package com.woebbi.a20190806_002_layouts;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -71,12 +74,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if(lAUsernameInput.length() > 0 && lAPasswordInput.length() > 0){
                 String username = lAUsernameInput.getText().toString();
                 String password = lAPasswordInput.getText().toString();
-                String usernameDB = "blah@blah.de";
-                String passwordDB = "blah";
+                String usernameDB = "b";
+                String passwordDB = "b";
                 if(username.equals(usernameDB) && password.equals(passwordDB)){
                     //Login erfolgreich
                     //alleshierrein
                     Toast.makeText(this,"erfolgreich", Toast.LENGTH_LONG).show();
+                    Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(newIntent);
+
+
+
 
                 }else{
                     Toast.makeText(this,"Benutzername oder Password Falsch", Toast.LENGTH_LONG).show();
