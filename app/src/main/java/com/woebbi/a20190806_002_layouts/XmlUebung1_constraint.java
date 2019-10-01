@@ -11,6 +11,6 @@ public class XmlUebung1_constraint extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        setContentView(R.layout.xmluebung1_constraint);
+        setContentView(R.layout.xmluebung1_grid);
     }
 }

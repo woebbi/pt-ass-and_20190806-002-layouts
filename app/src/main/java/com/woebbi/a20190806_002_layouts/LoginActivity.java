@@ -17,7 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
  * @license beerware
  */
 
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+    //View.onClickListner  ist ein Interface
+    //extends - vererben
+    //implements - importiert
     private EditText lAPasswordInput;
     private TextView lAPasswordText;
     private EditText lAUsernameInput;
@@ -33,13 +37,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         //assosiate internal class variable with the loginActivity IDs
-        lAUsernameInput = findViewById(R.id.loginActivityUsernameInput);
-        lAUsernameText = findViewById(R.id.loginActivityUsernameText);
-        lAPasswordInput = findViewById(R.id.loginActivityPasswordInput);
-        lAPasswordText = findViewById(R.id.loginActivityPasswordText);
-        lAButtonAbort = findViewById(R.id.loginActivityButtonAbort);
-        lAButtonSend = findViewById(R.id.loginActivityButtonSend);
-        lAEmailProviderList = findViewById(R.id.loginActivityEmailProviderList);
+        lAUsernameInput       = findViewById(R.id.loginActivityUsernameInput);
+        lAUsernameText        = findViewById(R.id.loginActivityUsernameText);
+        lAPasswordInput       = findViewById(R.id.loginActivityPasswordInput);
+        lAPasswordText        = findViewById(R.id.loginActivityPasswordText);
+        lAButtonAbort         = findViewById(R.id.loginActivityButtonAbort);
+        lAButtonSend          = findViewById(R.id.loginActivityButtonSend);
+        lAEmailProviderList   = findViewById(R.id.loginActivityEmailProviderList);
 
         //2 wege - der anonyme  - nur lokal für den einen button
         /*
@@ -58,12 +62,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-    @Override
+    @Override   //auch genannt Annotation
     public void onClick(View view) {
         //R.id.loginActivityPasswordText
         if (view.getId() == lAButtonSend.getId()) {
-            Toast.makeText(this, "Anmelden", Toast.LENGTH_LONG).show();
-            lAUsernameText.setTextColor(getColor(R.color.colorPrimaryDark));
+            //Toast.makeText(this, "Anmelden", Toast.LENGTH_LONG).show();
+            //lAUsernameText.setTextColor(getColor(R.color.colorPrimaryDark));
+            if(lAUsernameInput.length() > 0 && lAPasswordInput.length() > 0){
+                String username = lAUsernameInput.getText().toString();
+                String password = lAPasswordInput.getText().toString();
+                String usernameDB = "blah@blah.de";
+                String passwordDB = "blah";
+                if(username.equals(usernameDB) && password.equals(passwordDB)){
+                    //Login erfolgreich
+                    //alleshierrein
+                    Toast.makeText(this,"erfolgreich", Toast.LENGTH_LONG).show();
+
+                }else{
+                    Toast.makeText(this,"Benutzername oder Password Falsch", Toast.LENGTH_LONG).show();
+                }
+            }else {
+                Toast.makeText(this, "Alle Felder ausfüllen", Toast.LENGTH_LONG).show();
+            }
         } else if (view.getId() == lAButtonAbort.getId()) {
             lAUsernameText.setText(R.string.loginActivityPassword);
             Toast.makeText(this, "Abrechen", Toast.LENGTH_LONG).show();
