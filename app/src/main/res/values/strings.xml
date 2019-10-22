@@ -33,6 +33,7 @@
     <string name="xmlUebung0ActivityEmailIdInput" translatable="false">Email Id</string>
     <string name="xmlUebung0ActivityButtonCancel" translatable="false">Cancel</string>
     <string name="xmlUebung0ActivityButtonSubmit" translatable="false">Submit</string>
+    <string name="mainActivityNoEmail" translatable="false">mainActivityNoEmail</string>
 
 
 </resources>
