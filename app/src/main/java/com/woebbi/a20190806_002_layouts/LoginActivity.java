@@ -82,7 +82,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override   //auch genannt Annotation
     public void onClick(View view) {
-        //R.id.loginActivityPasswordText
         if (view.getId() == lAButtonSend.getId()) {
             //Toast.makeText(this, "Anmelden", Toast.LENGTH_LONG).show();
             //lAUsernameText.setTextColor(getColor(R.color.colorPrimaryDark));

@@ -1,25 +1,23 @@
 package com.woebbi.a20190806_002_layouts;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toolbar;
+import android.widget.Toast;
+
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.w3c.dom.Text;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    /*
-    private EditText lAPasswordInput;
-    private TextView lAPasswordText;
-    private EditText lAUsernameInput;
-    */
     //alles für die dings erstelleren
     private Toolbar mAToolbar;
     private FrameLayout mAFrameLayout;
@@ -33,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
         mAToolbar = findViewById(R.id.mainActivityToolbar);
         mAFrameLayout = findViewById(R.id.mainActivityFrameLayout);
         mAListViewEmail = findViewById(R.id.mainActivityListViewEmail);
@@ -41,8 +41,20 @@ public class MainActivity extends AppCompatActivity {
         mATextViewNoEmail = findViewById(R.id.mainActivityTextViewNoEmail);
 
 
+        //Listeners
+        mAFAB.setOnClickListener(this);
+
         //LAyout für diese activity setzten
-        setContentView(R.layout.activity_main);
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(this, "Abbrechen", Toast.LENGTH_LONG).show();
+        if (view.getId() == mAFAB.getId()) {
+
+            mAFAB.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        }
     }
 }
 
