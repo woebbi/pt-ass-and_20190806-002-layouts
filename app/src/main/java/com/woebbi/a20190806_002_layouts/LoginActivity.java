@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -21,7 +22,7 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     //View.onClickListner  ist ein Interface
     //extends - vererben
     //implements - importiert
@@ -32,6 +33,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button lAButtonSend;
     private Button lAButtonAbort;
     private Spinner lAEmailProviderList;
+
+    private int provPosition = 0;
 
     private boolean firstRun = true;
 
@@ -97,10 +100,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     firstRun = false;
                     SharedPreferences.Editor spe = sp.edit();
                     spe.putBoolean("firstRun",firstRun);
-                    spe.commit();
+                    spe.apply();
 
                     Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
                     newIntent.putExtra("user", username);
+                    newIntent.putExtra("provPos", provPosition);
                     startActivity(newIntent);
                     finish();
                 } else {
@@ -113,5 +117,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             Toast.makeText(this, "Abrechen", Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        provPosition = i;
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+        provPosition = 0;
+        Toast.makeText(this, "Bitte auswählen", Toast.LENGTH_LONG).show();
     }
 }
