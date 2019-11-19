@@ -47,12 +47,19 @@ public class ComposeActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        //Switch will be filled with other cases Later TODO
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
                 Toast.makeText(this, "ABC", Toast.LENGTH_LONG).show();
+                sendMail();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    private void sendMail(){
+        //TODO, read Values und use them to to send a actual mail
+
+
     }
 }
