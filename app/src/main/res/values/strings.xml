@@ -34,6 +34,7 @@
     <string name="xmlUebung0ActivityButtonCancel" translatable="false">Cancel</string>
     <string name="xmlUebung0ActivityButtonSubmit" translatable="false">Submit</string>
     <string name="mainActivityNoEmail" translatable="false">mainActivityNoEmail</string>
+    <string name="menucomposeicon" translatable="false">menuComposeIcon</string>
 
 
 </resources>

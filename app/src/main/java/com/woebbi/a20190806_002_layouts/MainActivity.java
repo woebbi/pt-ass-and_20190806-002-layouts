@@ -3,6 +3,7 @@ package com.woebbi.a20190806_002_layouts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -50,10 +51,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(this, "Abbrechen", Toast.LENGTH_LONG).show();
-        if (view.getId() == mAFAB.getId()) {
 
-            mAFAB.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        if (view.getId() == mAFAB.getId()) {
+            Intent i = new Intent(this, ComposeActivity.class);
+            startActivity(i);
         }
     }
 }

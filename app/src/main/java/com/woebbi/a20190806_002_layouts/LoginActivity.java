@@ -78,7 +78,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(newIntent);
             finish();
-
         }
     }
 
@@ -100,11 +99,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     firstRun = false;
                     SharedPreferences.Editor spe = sp.edit();
                     spe.putBoolean("firstRun",firstRun);
+                    spe.putString("user",username);
+                    spe.putInt("provPos",provPosition);
                     spe.apply();
 
-                    Intent newIntent = new Intent(LoginActivity.this, MainActivity.class);
-                    newIntent.putExtra("user", username);
-                    newIntent.putExtra("provPos", provPosition);
+                    Intent newIntent = new Intent(this, MainActivity.class);
+                    //newIntent.putExtra("user", username);
+                    //newIntent.putExtra("provPos", provPosition);
                     startActivity(newIntent);
                     finish();
                 } else {
