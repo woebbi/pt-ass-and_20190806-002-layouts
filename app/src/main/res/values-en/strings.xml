@@ -12,4 +12,7 @@
     <string name="composeActivityFrom">From:</string>
     <string name="composeActivitySubject">Subject:</string>
     <string name="composeActivityTextContent">Please write here</string>
+    <string name="composeActivityNeededTo">Enter Recipient</string>
+    <string name="composeActivityNeededSubject">Enter Subject</string>
+    <string name="composeActivityNeededTextContent">Enter Content</string>
 </resources>

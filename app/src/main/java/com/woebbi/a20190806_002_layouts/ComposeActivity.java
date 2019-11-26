@@ -51,7 +51,26 @@ public class ComposeActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
                 Toast.makeText(this, "ABC", Toast.LENGTH_LONG).show();
-                sendMail();
+                String cAFrom = cAFromInput.getText().toString();
+                String cATo = cAToInput.getText().toString();
+                String cASubject = cASubjectInput.getText().toString();
+                String cATextContent = cATextContentInput.getText().toString();
+
+                if (cAFrom != "" && cATo != "" && cASubject != "" && cATextContent != ""){
+                    Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,null,null);
+                    sendMail();
+                }else{
+                    if(cATo != ""){
+                        cAToInput.setText(R.string.composeActivityNeededTo);
+                    }
+                    if(cASubject != ""){
+                        cASubjectInput.setText(R.string.composeActivityNeededSubject);
+                    }
+                    if(cATextContent != ""){
+                        cATextContentInput.setText(R.string.composeActivityNeededTextContent);
+                    }
+                }
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -59,7 +78,7 @@ public class ComposeActivity extends AppCompatActivity {
     }
     private void sendMail(){
         //TODO, read Values und use them to to send a actual mail
-
+        //EmailProvider
 
     }
 }

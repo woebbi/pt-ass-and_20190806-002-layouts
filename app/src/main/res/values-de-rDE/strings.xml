@@ -12,4 +12,7 @@
     <string name="composeActivityTextContent">Hier schreiben</string>
     <string name="composeActivitySubject">Betreff:</string>
     <string name="composeActivityFrom">Von:</string>
+    <string name="composeActivityNeededTo">Empfäanger eingeben</string>
+    <string name="composeActivityNeededSubject">Betreff Eingeben</string>
+    <string name="composeActivityNeededTextContent">Text eingeben</string>
 </resources>
