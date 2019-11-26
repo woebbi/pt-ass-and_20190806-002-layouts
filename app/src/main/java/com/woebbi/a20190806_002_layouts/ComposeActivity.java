@@ -14,6 +14,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Date;
+
 public class ComposeActivity extends AppCompatActivity {
     private EditText cAFromInput, cAToInput, cASubjectInput, cATextContentInput;
     private Toolbar cAToolbar;
@@ -50,33 +52,35 @@ public class ComposeActivity extends AppCompatActivity {
         //Switch will be filled with other cases Later TODO
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
-                Toast.makeText(this, "ABC", Toast.LENGTH_LONG).show();
+                //Toast.makeText(this, "ABC", Toast.LENGTH_LONG).show();
                 String cAFrom = cAFromInput.getText().toString();
                 String cATo = cAToInput.getText().toString();
                 String cASubject = cASubjectInput.getText().toString();
                 String cATextContent = cATextContentInput.getText().toString();
 
-                if (cAFrom != "" && cATo != "" && cASubject != "" && cATextContent != ""){
-                    Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,null,null);
-                    sendMail();
+                if (cAFrom.length() > 0 && cATo.length() > 0 && cASubject.length() > 0 && cASubject != getText(R.string.composeActivitySubject) && cATextContent.length() > 0){
+                    Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
+                    Date dateNow = new Date();
+                    Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,dateNow,null);
+                    sendMail(theMail);
                 }else{
-                    if(cATo != ""){
+                    Toast.makeText(this, "rausch", Toast.LENGTH_LONG).show();
+                    if(cATo.length() == 0){
                         cAToInput.setText(R.string.composeActivityNeededTo);
                     }
-                    if(cASubject != ""){
+                    if(cASubject.length() == 0 || cASubject != getText(R.string.composeActivitySubject)){
                         cASubjectInput.setText(R.string.composeActivityNeededSubject);
                     }
-                    if(cATextContent != ""){
+                    if(cATextContent.length() == 0){
                         cATextContentInput.setText(R.string.composeActivityNeededTextContent);
                     }
                 }
-
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-    private void sendMail(){
+    private void sendMail(Email mail){
         //TODO, read Values und use them to to send a actual mail
         //EmailProvider
 
