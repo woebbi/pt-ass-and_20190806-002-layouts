@@ -48,21 +48,23 @@ public class ComposeActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        sendMail(formEmail());
+        finish();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         //Switch will be filled with other cases Later TODO
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
-                //Toast.makeText(this, "ABC", Toast.LENGTH_LONG).show();
                 String cAFrom = cAFromInput.getText().toString();
                 String cATo = cAToInput.getText().toString();
                 String cASubject = cASubjectInput.getText().toString();
                 String cATextContent = cATextContentInput.getText().toString();
-
                 if (cAFrom.length() > 0 && cATo.length() > 0 && cASubject.length() > 0 && cASubject != getText(R.string.composeActivitySubject) && cATextContent.length() > 0){
                     Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
-                    Date dateNow = new Date();
-                    Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,dateNow,null);
-                    sendMail(theMail);
+                    sendMail(formEmail());
                 }else{
                     Toast.makeText(this, "rausch", Toast.LENGTH_LONG).show();
                     if(cATo.length() == 0){
@@ -75,13 +77,26 @@ public class ComposeActivity extends AppCompatActivity {
                         cATextContentInput.setText(R.string.composeActivityNeededTextContent);
                     }
                 }
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
+    private Email formEmail(){
+        String cAFrom = cAFromInput.getText().toString();
+        String cATo = cAToInput.getText().toString();
+        String cASubject = cASubjectInput.getText().toString();
+        String cATextContent = cATextContentInput.getText().toString();
+        Date dateNow = new Date();
+        Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,dateNow,null);
+        return theMail;
+    }
     private void sendMail(Email mail){
         //TODO, read Values und use them to to send a actual mail
+
+        //wenn email gesendet dann in gesendet
+        //wenn zurück dann entwurf
         //EmailProvider
 
     }
