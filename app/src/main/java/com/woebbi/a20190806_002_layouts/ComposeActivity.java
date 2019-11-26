@@ -58,7 +58,7 @@ public class ComposeActivity extends AppCompatActivity {
         //Switch will be filled with other cases Later TODO
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
-                if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 && !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) && cATextContentInput.length() > 0){
+                if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 /*&& !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) */&& cATextContentInput.length() > 0){
                     Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
                     sendMail(formEmail());
                 }else{
@@ -66,7 +66,7 @@ public class ComposeActivity extends AppCompatActivity {
                     if(cAToInput.length() == 0){
                         cAToInput.setText(R.string.composeActivityNeededTo);
                     }
-                    if(cASubjectInput.length() == 0 ||  cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))){
+                    if(cASubjectInput.length() == 0 /*||  cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))*/){
                         cASubjectInput.setText(R.string.composeActivityNeededSubject);
                     }
                     if(cATextContentInput.length() == 0){
@@ -89,7 +89,8 @@ public class ComposeActivity extends AppCompatActivity {
         return theMail;
     }
     private void sendMail(Email mail){
-        //TODO, read Values und use them to to send a actual mail
+        //TODO, fallunterscheidung ob backbutten oder absendebutton
+        //onActivityResult
 
         //wenn email gesendet dann in gesendet
         //wenn zurück dann entwurf
