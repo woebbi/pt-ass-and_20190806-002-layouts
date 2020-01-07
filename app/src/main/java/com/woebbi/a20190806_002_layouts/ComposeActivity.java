@@ -50,7 +50,7 @@ public class ComposeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        sendMail(formEmail(),0);
+        sendMail(formEmail(),R.integer.notSent);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ComposeActivity extends AppCompatActivity {
             case R.id.menuComposeSend:
                 if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 /*&& !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) */&& cATextContentInput.length() > 0){
                     Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
-                    sendMail(formEmail(),1);
+                    sendMail(formEmail(),R.integer.sent);
                 }else{
                     Toast.makeText(this, "rausch", Toast.LENGTH_LONG).show();
                     if(cAToInput.length() == 0){

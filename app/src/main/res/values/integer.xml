@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="sent">1</integer>
+    <integer name="notSent">2</integer>
+    <integer  name="requestCompose">100</integer>
+</resources>
