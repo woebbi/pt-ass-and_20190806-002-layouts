@@ -1,8 +1,9 @@
 package com.woebbi.a20190806_002_layouts;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Email {
+public class Email implements Serializable {
 
     private String to;
     private String from;
@@ -67,4 +68,7 @@ public class Email {
     public void setReceiveDate(Date receiveDate) {
         this.receiveDate = receiveDate;
     }
+
+
+
 }
