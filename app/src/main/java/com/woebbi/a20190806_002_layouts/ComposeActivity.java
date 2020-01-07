@@ -1,6 +1,7 @@
 package com.woebbi.a20190806_002_layouts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
@@ -49,8 +50,7 @@ public class ComposeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        sendMail(formEmail());
-        finish();
+        sendMail(formEmail(),0);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class ComposeActivity extends AppCompatActivity {
             case R.id.menuComposeSend:
                 if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 /*&& !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) */&& cATextContentInput.length() > 0){
                     Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
-                    sendMail(formEmail());
+                    sendMail(formEmail(),1);
                 }else{
                     Toast.makeText(this, "rausch", Toast.LENGTH_LONG).show();
                     if(cAToInput.length() == 0){
@@ -79,6 +79,11 @@ public class ComposeActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    /**
+     * is used to form a email object from the inputs and current date, receiveDate is null and is to be filled by other methodes
+     * @return returns a "email" object
+     */
     private Email formEmail(){
         String cAFrom = cAFromInput.getText().toString();
         String cATo = cAToInput.getText().toString();
@@ -88,7 +93,20 @@ public class ComposeActivity extends AppCompatActivity {
         Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,dateNow,null);
         return theMail;
     }
-    private void sendMail(Email mail){
+
+    /**
+     * is used to transfer object of type Email and the int sent to Intent MainActivity a
+     * @param email expects a object of type "Email"
+     * @param sent expects a int - 1 if sent, 0 if back/notsent
+     */
+    private void sendMail(Email email,int sent){
+        Intent in = new Intent(this, MainActivity.class);
+        in.putExtra("sent",sent);
+        in.putExtra("email",email);
+        //startActivity(in);
+        setResult(sent,in);
+        finish();
+
         //TODO, fallunterscheidung ob backbutten oder absendebutton
         //onActivityResult
 
