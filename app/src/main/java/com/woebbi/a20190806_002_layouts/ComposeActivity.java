@@ -101,14 +101,13 @@ public class ComposeActivity extends AppCompatActivity {
      */
     private void sendMail(Email email,int sent){
         Intent in = new Intent(this, MainActivity.class);
-        in.putExtra("sent",sent);
         in.putExtra("email",email);
         //startActivity(in);
         setResult(sent,in);
         finish();
 
         //TODO, fallunterscheidung ob backbutten oder absendebutton
-        //onActivityResult
+
 
         //wenn email gesendet dann in gesendet
         //wenn zurück dann entwurf

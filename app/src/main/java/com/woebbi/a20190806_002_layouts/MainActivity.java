@@ -1,5 +1,6 @@
 package com.woebbi.a20190806_002_layouts;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -51,11 +52,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
         if (view.getId() == mAFAB.getId()) {
             Intent i = new Intent(this, ComposeActivity.class);
-            startActivity(i);
+            startActivityForResult(i,100);
+
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
 
