@@ -16,6 +16,10 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     //alles für die dings erstelleren
@@ -27,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mATextViewNoEmail;
 
     private SharedPreferences sp;
+
+    //ArrayListen für die jeweiligen EmailPunkte
+    private ArrayList<Email> aListSent,aListReceived,aListDraft,aListSpam,aListTrash;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId() == mAFAB.getId()) {
             Intent i = new Intent(this, ComposeActivity.class);
             //Starten der
-            startActivityForResult(i,100);
+            startActivityForResult(i, 100);
 
         }
     }
@@ -61,7 +69,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(this, resultCode + "Result <-> Request" + requestCode , Toast.LENGTH_LONG).show();
+        switch (requestCode) {
+            case 100: //kommt aus der COMPOSEACTIVITY
+                if (resultCode == 1) { //BEI GESENDET
+                    //Wird in sentListe gemacht
+                    Toast.makeText(this, resultCode + "Result <1sent1> Request" + requestCode, Toast.LENGTH_LONG).show();
+                } else if (resultCode == 2) {//BEI BACK
+                    //wird in entwurfliste gepackt
+                    Toast.makeText(this, resultCode + "Result <2notSent2> Request" + requestCode, Toast.LENGTH_LONG).show();
+                } else {//BEI ZURÜCK
+                    //meep
+                    Toast.makeText(this, resultCode + "Result <?> Request" + requestCode, Toast.LENGTH_LONG).show();
+                }
+                return;
+            default:
+                Toast.makeText(this, resultCode + "Result <???????> Request" + requestCode, Toast.LENGTH_LONG).show();
+                return;
+
+        }
     }
 }
+
 
