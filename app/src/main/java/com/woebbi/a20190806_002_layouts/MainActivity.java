@@ -19,6 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private SharedPreferences sp;
 
-    //ArrayListen für die jeweiligen EmailPunkte
+    //ArrayListen für die jeweiligen EmailPunkte deklariernenenenen
     private ArrayList<Email> aListSent,aListReceived,aListDraft,aListSpam,aListTrash;
 
 
@@ -48,11 +49,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAFAB = findViewById(R.id.mainActivityFAB);
         mATextViewNoEmail = findViewById(R.id.mainActivityTextViewNoEmail);
 
+        //ArrayList inizialisieren
+        aListReceived = new ArrayList<>();
+        aListSent = new ArrayList<>();
+        aListDraft = new ArrayList<>();
+        aListSpam = new ArrayList<>();
+        aListTrash = new ArrayList<>();
+
 
         //Listeners
         mAFAB.setOnClickListener(this);
 
-        //LAyout für diese activity setzten
+        //DummyDaten für die Listen
+        aListReceived = Utils.fillTheDummy(10, "Received");
+        aListSent = Utils.fillTheDummy(9, "Sent");
+        aListDraft = Utils.fillTheDummy(8, "Draft");
+        aListSpam = Utils.fillTheDummy(7, "Spamm");
+        aListTrash = Utils.fillTheDummy(6, "Trash");
+
 
     }
 
@@ -69,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Toast.makeText(this, aListReceived.size() + " " + aListSent.size() + " " + aListDraft.size() + " " + aListSpam.size() + " " + aListTrash.size() + " ", Toast.LENGTH_LONG).show();
         switch (requestCode) {
             case 100: //kommt aus der COMPOSEACTIVITY
                 if (resultCode == 1) { //BEI GESENDET
