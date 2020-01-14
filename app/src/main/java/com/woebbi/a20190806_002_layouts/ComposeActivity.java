@@ -50,8 +50,9 @@ public class ComposeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        sendMail(formEmail(),R.integer.notSent);
+        sendMail(formEmail(),2);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -60,7 +61,7 @@ public class ComposeActivity extends AppCompatActivity {
             case R.id.menuComposeSend:
                 if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 /*&& !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) */&& cATextContentInput.length() > 0){
                     Toast.makeText(this, "rein", Toast.LENGTH_LONG).show();
-                    sendMail(formEmail(),R.integer.sent);
+                    sendMail(formEmail(),1);
                 }else{
                     Toast.makeText(this, "rausch", Toast.LENGTH_LONG).show();
                     if(cAToInput.length() == 0){
@@ -97,7 +98,7 @@ public class ComposeActivity extends AppCompatActivity {
     /**
      * is used to transfer object of type Email and the int sent to Intent MainActivity a
      * @param email expects a object of type "Email"
-     * @param sent expects a int - 1 if sent, 0 if back/notsent
+     * @param sent expects a int - 1 if sent, 2 if back/notsent
      */
     private void sendMail(Email email,int sent){
         Intent in = new Intent(this, MainActivity.class);

@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == mAFAB.getId()) {
             Intent i = new Intent(this, ComposeActivity.class);
+            //Starten der
             startActivityForResult(i,100);
 
         }
