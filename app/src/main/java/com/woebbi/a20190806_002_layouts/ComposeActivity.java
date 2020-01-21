@@ -36,6 +36,7 @@ public class ComposeActivity extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("com.woebbi.a20190806_002_layouts", Context.MODE_PRIVATE);
         String username = sp.getString("user", "");
+
         cAFromInput.setText(username);
         cAFromInput.setEnabled(false);
 
@@ -56,7 +57,6 @@ public class ComposeActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //Switch will be filled with other cases Later TODO
         switch (item.getItemId()) {
             case R.id.menuComposeSend:
                 if (cAFromInput.length() > 0 && cAToInput.length() > 0 && cASubjectInput.length() > 0 /*&& !(cASubjectInput.getText().toString().equals(getText(R.string.composeActivitySubject))) */&& cATextContentInput.length() > 0){
@@ -103,16 +103,9 @@ public class ComposeActivity extends AppCompatActivity {
     private void sendMail(Email email,int sent){
         Intent in = new Intent(this, MainActivity.class);
         in.putExtra("email",email);
-        //startActivity(in);
         setResult(sent,in);
         finish();
 
-        //TODO, fallunterscheidung ob backbutten oder absendebutton
-
-
-        //wenn email gesendet dann in gesendet
-        //wenn zurück dann entwurf
-        //EmailProvider
 
     }
 }

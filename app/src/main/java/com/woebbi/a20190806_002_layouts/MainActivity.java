@@ -1,5 +1,5 @@
 package com.woebbi.a20190806_002_layouts;
-//package com.woebbi.a20190806_002_layouts;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -17,9 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,16 +55,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         aListTrash = new ArrayList<>();
 
 
-        //Listeners
-        mAFAB.setOnClickListener(this);
 
         //DummyDaten für die Listen
         aListReceived = Utils.fillTheDummy(10, "Received");
         aListSent = Utils.fillTheDummy(9, "Sent");
         aListDraft = Utils.fillTheDummy(8, "Draft");
-        aListSpam = Utils.fillTheDummy(7, "Spamm");
+        aListSpam = Utils.fillTheDummy(7, "Spam");
         aListTrash = Utils.fillTheDummy(6, "Trash");
 
+        //Listeners
+        mAFAB.setOnClickListener(this);
 
     }
 
@@ -92,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else if (resultCode == 2) {//BEI BACK
                     //wird in entwurfliste gepackt
                     Toast.makeText(this, resultCode + "Result <2notSent2> Request" + requestCode, Toast.LENGTH_LONG).show();
-                } else {//BEI ZURÜCK
+                } else {//Bei kaputt
                     //meep
                     Toast.makeText(this, resultCode + "Result <?> Request" + requestCode, Toast.LENGTH_LONG).show();
                 }
