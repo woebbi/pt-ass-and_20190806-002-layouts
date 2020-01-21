@@ -1,5 +1,6 @@
 package com.woebbi.a20190806_002_layouts;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -82,13 +83,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Toast.makeText(this, aListReceived.size() + " " + aListSent.size() + " " + aListDraft.size() + " " + aListSpam.size() + " " + aListTrash.size() + " ", Toast.LENGTH_LONG).show();
+        Email emailResult = null;
+        if (data != null) {
+            emailResult = (Email) data.getSerializableExtra("email");
+
+        }
         switch (requestCode) {
             case 100: //kommt aus der COMPOSEACTIVITY
                 if (resultCode == 1) { //BEI GESENDET
                     //Wird in sentListe gemacht
+                    aListSent.add(emailResult);
+
                     Toast.makeText(this, resultCode + "Result <1sent1> Request" + requestCode, Toast.LENGTH_LONG).show();
                 } else if (resultCode == 2) {//BEI BACK
                     //wird in entwurfliste gepackt
+                    aListDraft.add(emailResult);
+
                     Toast.makeText(this, resultCode + "Result <2notSent2> Request" + requestCode, Toast.LENGTH_LONG).show();
                 } else {//Bei kaputt
                     //meep
