@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ListView mAListViewNav;
     private FloatingActionButton mAFAB;
     private TextView mATextViewNoEmail;
+    private EmailAdapter emailAdapter;
 
     private SharedPreferences sp;
 
@@ -64,6 +66,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         aListDraft = Utils.fillTheDummy(8, "Draft");
         aListSpam = Utils.fillTheDummy(7, "Spam");
         aListTrash = Utils.fillTheDummy(6, "Trash");
+
+
+        //Emailliste und adapter verbinden
+        emailAdapter = new EmailAdapter(aListReceived, this);
+        mAListViewEmail.setAdapter(emailAdapter);
 
         //Listeners
         mAFAB.setOnClickListener(this);

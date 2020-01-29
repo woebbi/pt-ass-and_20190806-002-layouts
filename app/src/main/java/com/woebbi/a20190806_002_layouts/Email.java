@@ -1,6 +1,7 @@
 package com.woebbi.a20190806_002_layouts;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Email implements Serializable {
@@ -9,15 +10,18 @@ public class Email implements Serializable {
     private String from;
     private String subject;
     private String message;
-    private Date sentDate;
+    private Calendar sentDate;
     private Date receiveDate;
 
-    public Email(String to, String from, String subject, String message, Date sentDate, Date receiveDate){
+    private Calendar cal;
+
+    public Email(String to, String from, String subject, String message, Calendar cal, Date receiveDate) {
         this.to = to;
         this.from = from;
         this.subject = subject;
         this.message = message;
         this.sentDate = sentDate;
+        this.cal = cal;
         this.receiveDate = receiveDate;
     }
 
@@ -53,16 +57,20 @@ public class Email implements Serializable {
         this.message = message;
     }
 
-    public Date getSentDate() {
+    public Calendar getSentDate() {
         return sentDate;
     }
 
-    public void setSentDate(Date sentDate) {
+    public void setSentDate(Calendar sentDate) {
         this.sentDate = sentDate;
     }
 
     public Date getReceiveDate() {
         return receiveDate;
+    }
+
+    public Calendar getCalendar() {
+        return cal;
     }
 
     public void setReceiveDate(Date receiveDate) {

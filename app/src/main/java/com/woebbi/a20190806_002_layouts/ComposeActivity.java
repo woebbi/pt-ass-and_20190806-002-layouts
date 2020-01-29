@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class ComposeActivity extends AppCompatActivity {
@@ -90,8 +91,10 @@ public class ComposeActivity extends AppCompatActivity {
         String cATo = cAToInput.getText().toString();
         String cASubject = cASubjectInput.getText().toString();
         String cATextContent = cATextContentInput.getText().toString();
-        Date dateNow = new Date();
-        Email theMail = new Email(cATo,cAFrom,cASubject,cATextContent,dateNow,null);
+        Calendar dateNowCal = Calendar.getInstance();
+
+
+        Email theMail = new Email(cATo, cAFrom, cASubject, cATextContent, dateNowCal, null);
         return theMail;
     }
 
