@@ -15,7 +15,7 @@ public class Email implements Serializable {
 
     private Calendar cal;
 
-    public Email(String to, String from, String subject, String message, Calendar cal, Date receiveDate) {
+    public Email(String to, String from, String subject, String message, Calendar cal, Date receiveDate) { //TODO change reviece date to calendar
         this.to = to;
         this.from = from;
         this.subject = subject;

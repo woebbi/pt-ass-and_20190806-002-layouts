@@ -62,8 +62,12 @@ public class EmailAdapter extends ArrayAdapter<Email> {
         emailListActivitySubject.setText(mail.getSubject());
         emailListActivityText.setText(mail.getMessage());
 
-        emailListActivityDate.setText(mail.getCalendar().get(Calendar.YEAR) + "." + (mail.getCalendar().get(Calendar.MONTH) + 1) + "." + mail.getCalendar().get(Calendar.DAY_OF_MONTH));
-        emailListActivityTime.setText(mail.getCalendar().get(Calendar.HOUR_OF_DAY) + ":" + (mail.getCalendar().get(Calendar.MINUTE) + 1) + ":" + mail.getCalendar().get(Calendar.SECOND));
+
+        //convert the CALENDAR OBJECT to the specific Time format
+        CharSequence theTime = new SimpleDateFormat("HH:mm:ss").format(mail.getCalendar().getTime());
+        CharSequence theDate = new SimpleDateFormat("yyyy.MM.dd").format(mail.getCalendar().getTime());
+        emailListActivityDate.setText(theDate); //mail.getCalendar().get(Calendar.YEAR) + "." + (mail.getCalendar().get(Calendar.MONTH) + 1) + "." + mail.getCalendar().get(Calendar.DAY_OF_MONTH));
+        emailListActivityTime.setText(theTime); //mail.getCalendar().get(Calendar.HOUR_OF_DAY) + ":" + (mail.getCalendar().get(Calendar.MINUTE) + 1) + ":" + mail.getCalendar().get(Calendar.SECOND));
 //        emailListActivityDate.setText("");
 //        emailListActivityTime.setText("");
 
