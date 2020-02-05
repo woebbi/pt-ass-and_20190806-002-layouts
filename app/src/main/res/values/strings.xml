@@ -38,6 +38,12 @@
     <string name="composeActivityNeededTo">Enter Recipient</string>
     <string name="composeActivityNeededSubject">Enter Subject</string>
     <string name="composeActivityNeededTextContent">Enter Content</string>
-
+    <string-array name="menuMenu">
+        <item>Received</item>
+        <item>Sent</item>
+        <item>Spam</item>
+        <item>Draft</item>
+        <item>Trash</item>
+    </string-array>
 
 </resources>

@@ -43,6 +43,8 @@
             android:layout_width="240dp"
             android:layout_height="match_parent"
             android:choiceMode="singleChoice"
+            android:entries="@array/menuMenu"
+            tools:listitem="@layout/activity_drawer"
             android:layout_gravity="start"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -53,6 +55,7 @@
                 android:layout_margin="16dp"
                 android:src="@drawable/ic_mail_black_24dp" />
         </FrameLayout>
+
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </RelativeLayout>
