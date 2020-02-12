@@ -42,12 +42,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.textView.setText(menuList[position]);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+
+        return menuList.length;
     }
 
 

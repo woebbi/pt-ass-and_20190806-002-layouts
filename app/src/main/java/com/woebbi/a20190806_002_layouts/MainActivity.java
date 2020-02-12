@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mARecyclerView.setLayoutManager(mAlayoutManager);
 
         // specify an adapter (see also next example)
-        mAAdapter = new RecyclerAdapter(null);//TODO replace null
+
+        mAAdapter = new RecyclerAdapter(getResources().getStringArray(R.array.menuMenu));
         mARecyclerView.setAdapter(mAAdapter);
 
 
