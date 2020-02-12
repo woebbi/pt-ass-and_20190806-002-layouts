@@ -5,6 +5,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,10 +31,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Toolbar mAToolbar;
     private FrameLayout mAFrameLayout;
     private ListView mAListViewEmail;
-    private ListView mAListViewNav;
+    //private ListView mAListViewNav;//DEAC for Recycler
     private FloatingActionButton mAFAB;
     private TextView mATextViewNoEmail;
     private EmailAdapter emailAdapter;
+
+    //Recycler view test
+    private RecyclerView mARecyclerView;
 
     private SharedPreferences sp;
 
@@ -41,24 +46,83 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DrawerLayout maDrawerLayout;
 
+    private RecyclerView.Adapter mAAdapter;
+    private RecyclerView.LayoutManager mAlayoutManager;
+
+
+
+    /*
+    wir brauchen ein adapter,
+    "" einen layout manager
+
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    von der webseite und anpassen
+
+
+
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        // specify an adapter (see also next example)
+        mAdapter = new RecyclerAdapter(myDataset);
+        recyclerView.setAdapter(mAdapter);
+
+
+
+
+     */
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //ohne RecyclerView
+        //setContentView(R.layout.activity_main);//DEAC for Recycler
+        //mit Recyclerview
+        setContentView(R.layout.activity_main_with_a_recyclerview);
+        //Recycler View Verbinden und so
+        mARecyclerView = findViewById(R.id.mainActivityListViewNavRecycler);
+
 
         mAToolbar = findViewById(R.id.mainActivityToolbar);
         mAFrameLayout = findViewById(R.id.mainActivityFrameLayout);
         mAListViewEmail = findViewById(R.id.mainActivityListViewEmail);
-        mAListViewNav = findViewById(R.id.mainActivityListViewNav);
+        //mAListViewNav = findViewById(R.id.mainActivityListViewNav); //DEAC for Recycler
         mAFAB = findViewById(R.id.mainActivityFAB);
         mATextViewNoEmail = findViewById(R.id.mainActivityTextViewNoEmail);
 
 
         //Falls man niocht per XML (siehe activity main unter listviewlav) mache will kann man das so mit den adapter machen
 
-        mAListViewNav = findViewById(R.id.mainActivityListViewNav);
-        mAListViewNav.setAdapter(new ArrayAdapter<String>(this, R.layout.activity_drawer, getResources().getStringArray(R.array.menuMenu)));
+        //mAListViewNav = findViewById(R.id.mainActivityListViewNav);//DEAC for Recycler
+        //mAListViewNav.setAdapter(new ArrayAdapter<String>(this, R.layout.activity_drawer, getResources().getStringArray(R.array.menuMenu)));//DEAC for Recycler
+
+
+        //recycler
+
+        // use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        mARecyclerView.setHasFixedSize(true);
+
+        // use a linear layout manager
+        mAlayoutManager = new LinearLayoutManager(this);
+        mARecyclerView.setLayoutManager(mAlayoutManager);
+
+        // specify an adapter (see also next example)
+        mAAdapter = new RecyclerAdapter(null);
+        mARecyclerView.setAdapter(mAAdapter);
+
+
 
 
         //Toggle
