@@ -17,5 +17,15 @@ u
 Eapp/src/main/java/com/woebbi/a20190806_002_layouts/LoginActivity.java,0\a\0aa66f13ec2e20fd91fdc5ec27a3681aeefc98f3
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-v
-Fapp/src/main/java/com/woebbi/a20190806_002_layouts/RandomDateTime.java,b\0\b07b535452fb254da50c54c55a8cfd1f8b27f6d2
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+S
+#app/src/main/res/values/strings.xml,d\2\d2281fbb3027de2722081a53408dd77628bf080e
+u
+Eapp/src/main/java/com/woebbi/a20190806_002_layouts/EmailProvider.java,e\e\eeed2e914f2a0378f85559c84d085b4ca2a5552a
+l
+<app/src/main/java/com/woebbi/a20190806_002_layouts/User.java,c\2\c269dc2ce045ac71a2900008ecca4a8e357a2f52
+^
+.app/src/main/res/layout/recycler_view_item.xml,1\5\158701189d4e2d21208993bb06e00608de74db45
+Y
+)app/src/main/res/layout/activity_main.xml,7\6\76b07e40f24cce093536731477540f12e7da3cb6

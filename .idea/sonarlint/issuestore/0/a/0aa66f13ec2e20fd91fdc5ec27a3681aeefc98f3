@@ -1,0 +1,10 @@
+
+Isquid:S1068 "2Remove this unused "lAUsernameText" private field.(¨õÁ¹
+Nsquid:S1068"2Remove this unused "lAPasswordText" private field.(ûú±þüÿÿÿÿ
+ysquid:S1450#"bRemove the "lAEmailProviderList" field and declare it as a local variable in the relevant methods.(¡ëÖµ
+esquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(¿éŸÍ
+msquid:S2068_"V'password' detected in this expression, review this potentially hard-coded credential.(¬ÏÇ
+msquid:S2068^"V'password' detected in this expression, review this potentially hard-coded credential.(¡äÌÄ
+tsquid:S1450 "]Remove the "lAUsernameText" field and declare it as a local variable in the relevant methods.(¨õÁ¹
+Nsquid:S1068#"7Remove this unused "lAEmailProviderList" private field.(¡ëÖµ
+ysquid:S1450"]Remove the "lAPasswordText" field and declare it as a local variable in the relevant methods.(ûú±þüÿÿÿÿ

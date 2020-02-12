@@ -2,8 +2,10 @@ package com.woebbi.a20190806_002_layouts;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //ArrayListen für die jeweiligen EmailPunkte deklariernenenenen
     private ArrayList<Email> aListSent,aListReceived,aListDraft,aListSpam,aListTrash;
 
+    private DrawerLayout maDrawerLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAListViewNav = findViewById(R.id.mainActivityListViewNav);
         mAFAB = findViewById(R.id.mainActivityFAB);
         mATextViewNoEmail = findViewById(R.id.mainActivityTextViewNoEmail);
+
+
+        //Falls man niocht per XML (siehe activity main unter listviewlav) mache will kann man das so mit den adapter machen
+
+        mAListViewNav = findViewById(R.id.mainActivityListViewNav);
+        mAListViewNav.setAdapter(new ArrayAdapter<String>(this, R.layout.activity_drawer, getResources().getStringArray(R.array.menuMenu)));
+
+
+        //Toggle
+        maDrawerLayout = findViewById(R.id.mainActivityDrawerLayout);
+        ActionBarDrawerToggle mAdrawerToggle = new ActionBarDrawerToggle(this, maDrawerLayout, mAToolbar, R.string.openDrawerContentDescRes, R.string.closeDrawerContentDescRes);
+        mAdrawerToggle.syncState();
+        maDrawerLayout.addDrawerListener(mAdrawerToggle);
+
 
         //ArrayList inizialisieren
         aListReceived = new ArrayList<>();
@@ -74,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //Listeners
         mAFAB.setOnClickListener(this);
+
 
     }
 

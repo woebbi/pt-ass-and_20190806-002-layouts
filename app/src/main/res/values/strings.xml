@@ -38,6 +38,8 @@
     <string name="composeActivityNeededTo">Enter Recipient</string>
     <string name="composeActivityNeededSubject">Enter Subject</string>
     <string name="composeActivityNeededTextContent">Enter Content</string>
+    <string name="openDrawerContentDescRes" translatable="false">open</string>
+    <string name="closeDrawerContentDescRes" translatable="false">close</string>
     <string-array name="menuMenu">
         <item>Received</item>
         <item>Sent</item>
