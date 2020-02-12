@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         aListTrash = Utils.fillTheDummy(6, "Trash");
 
 
-        //Emailliste und adapter verbinden
+        //Emailliste und adapter verbindenK
         emailAdapter = new EmailAdapter(aListReceived, this);
         mAListViewEmail.setAdapter(emailAdapter);
 
