@@ -7,7 +7,7 @@
     <string name="generalAbort">Cancel</string>
     <string name="generalSend">Send</string>
     <string name="loginActivityEmail">Emailadress</string>
-    <string-array name="loginActivityEmailProviderList" >
+    <string-array name="loginActivityEmailProviderList">
         <item>Googlemail</item>
         <item>Gmx.net</item>
         <item>Web.de</item>
@@ -22,4 +22,30 @@
     <string name="viewActivityFrom" translatable="false">From:</string>
     <string name="viewActivityTextContent" translatable="false">TextContent</string>
     <string name="drawerActivityText" translatable="false">Text</string>
+
+
+    <string name="xmlUebung0ActivityToolbarText" translatable="false">NestingOfLayouts</string>
+    <string name="xmlUebung0ActivityUsernameText" translatable="false">User Name</string>
+    <string name="xmlUebung0ActivityUsernameInput" translatable="false">User Name</string>
+    <string name="xmlUebung0ActivityPhoneNoText" translatable="false">Phone No</string>
+    <string name="xmlUebung0ActivityPhoneNoInput" translatable="false">Phone No</string>
+    <string name="xmlUebung0ActivityEmailIdText" translatable="false">Email Id</string>
+    <string name="xmlUebung0ActivityEmailIdInput" translatable="false">Email Id</string>
+    <string name="xmlUebung0ActivityButtonCancel" translatable="false">Cancel</string>
+    <string name="xmlUebung0ActivityButtonSubmit" translatable="false">Submit</string>
+    <string name="mainActivityNoEmail" translatable="false">mainActivityNoEmail</string>
+    <string name="menucomposeicon" translatable="false">menuComposeIcon</string>
+    <string name="composeActivityNeededTo">Enter Recipient</string>
+    <string name="composeActivityNeededSubject">Enter Subject</string>
+    <string name="composeActivityNeededTextContent">Enter Content</string>
+    <string name="openDrawerContentDescRes" translatable="false">open</string>
+    <string name="closeDrawerContentDescRes" translatable="false">close</string>
+    <string-array name="menuMenu">
+        <item>Received</item>
+        <item>Sent</item>
+        <item>Spam</item>
+        <item>Draft</item>
+        <item>Trash</item>
+    </string-array>
+
 </resources>
